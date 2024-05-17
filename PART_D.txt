@@ -1,0 +1,32 @@
+# Question no 1 
+db.products.find(
+{ price: {lt: 50} }
+{title: 1, category: 1, price: 1}
+);
+
+# Question no 2
+db.products.updateOne(
+    {productId: "P003" },
+    { $set: 
+        {
+            price : 75
+        }
+        }
+);
+
+# Question no 3
+db.products.insertOne(
+    {
+        "productId" : "P005",
+        "title" : "Smartwatch",
+        "category" : "Electronics",
+        "price" : 149.99
+    }
+);
+
+# Question no 4
+db.products.deleteMany(
+    {
+        "category" : "Fashion"
+    }
+);
